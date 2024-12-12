@@ -1,0 +1,171 @@
+/* Global Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#gameArea {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#gameCanvas {
+  border: 2px solid black;
+  background-color: #e0e0e0;
+  box-sizing: border-box;
+}
+
+/* Stats */
+#stats {
+  margin-top: 10px;
+}
+
+/* Control Buttons - Arrow Keys */
+#control-buttons {
+  display: grid;
+  grid-template-columns: repeat(3, 60px);
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+#control-buttons button {
+  width: 60px;
+  height: 60px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+#control-buttons button:hover {
+  background-color: #45a049;
+}
+
+#control-buttons .empty {
+  background-color: transparent;
+  cursor: default;
+  pointer-events: none;
+}
+
+/* Start and Restart Buttons */
+#start-restart-buttons button {
+  padding: 10px 20px;
+  margin: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+#start-restart-buttons button:hover {
+  background-color: #45a049;
+}
+
+/* Quiz Modal */
+#quiz-modal {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  color: white;
+  text-align: center;
+}
+
+#quiz-options button {
+  background: #4CAF50;
+  color: white;
+  margin: 5px;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+#quiz-options button:hover {
+  background: #45a049;
+}
+
+/* Identity Modal */
+#identity-modal {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  color: white;
+  text-align: center;
+}
+
+#identity-modal input {
+  margin: 10px 0;
+  padding: 10px;
+  width: 80%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#identity-modal button {
+  padding: 10px 20px;
+  background: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+#identity-modal button:hover {
+  background: #45a049;
+}
+
+/* High Score Modal */
+#high-score-modal {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  color: white;
+  text-align: center;
+}
+
+#high-score-list {
+  margin: 15px 0;
+  font-size: 1.2em;
+}
+
+#high-score-modal button {
+  padding: 10px 20px;
+  background: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+#high-score-modal button:hover {
+  background: #45a049;
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Game with Questions</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="gameArea">
+        <canvas id="gameCanvas"></canvas>
+
+        <!-- Stats -->
+        <div id="stats">
+            <p>Skor: <span id="score">0</span></p>
+            <p>Nyawa: <span id="lives">3</span></p>
+        </div>
+
+        <!-- Control Buttons -->
+        <div id="control-buttons">
+            <button class="empty"></button>
+            <button onclick="changeDirection('up')">▲</button>
+            <button class="empty"></button>
+            <button onclick="changeDirection('left')">◀</button>
+            <button onclick="changeDirection('down')">▼</button>
+            <button onclick="changeDirection('right')">▶</button>
+            <button class="empty"></button>
+        </div>
+
+        <!-- Start and Restart Buttons -->
+        <div id="start-restart-buttons">
+            <button id="startButton" onclick="showIdentityModal()">Mulai</button>
+            <button id="restartButton" onclick="resetGame()" style="display:none;">Game Baru</button>
+        </div>
+    </div>
+
+    <!-- Modal for Questions -->
+    <div id="quiz-modal" style="display:none;">
+        <h2 id="quiz-question"></h2>
+        <div id="quiz-options"></div>
+    </div>
+
+    <!-- Modal for Identity -->
+    <div id="identity-modal" style="display:none;">
+        <h2>Isi Identitas</h2>
+        <label for="player-name">Nama:</label>
+        <input type="text" id="player-name" placeholder="Masukkan nama kamu">
+        <label for="player-class">Kelas:</label>
+        <input type="text" id="player-class" placeholder="Masukkan kelas kamu">
+        <button onclick="saveIdentity()">Mulai Game</button>
+    </div>
+
+    <!-- Modal for High Score -->
+    <div id="high-score-modal" style="display:none;">
+        <h2>High Score</h2>
+        <div id="high-score-list"></div>
+        <button id="resetHighScoreButton" onclick="resetHighScores()">Reset High Score</button>
+        <button id="newGameButton" onclick="newGameFromHighScore()">Game Baru</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
